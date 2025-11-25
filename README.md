@@ -87,7 +87,7 @@ ReDoc: http://127.0.0.1:8000/redoc
     "id": 1,
     "has_voted": true
 }
-
+````
 **Endpoint:** ` POST http://127.0.0.1:8000/voters/1`  
 **Descripción:** Busca un votante.
 
@@ -106,6 +106,7 @@ ReDoc: http://127.0.0.1:8000/redoc
     "has_voted": false,
     "message": "Votante registrado exitosamente"
 }
+````
 
 
 
