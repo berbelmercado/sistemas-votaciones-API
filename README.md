@@ -31,19 +31,40 @@ GET	/voters/{id}	Obtener un votante por ID
 DELETE	/voters/{id}	Eliminar un votante
 
 Candidatos
-Método	Ruta	                Descripción
-POST	/candidates	        Registrar un nuevo candidato
-GET	/candidates	        Listar todos los candidatos
-GET	/candidates/{id}	Obtener un candidato por ID
-DELETE	/candidates/{id}	Eliminar un candidato
+# Documentación de la API de Sistema de Votaciones
 
-Votos
-Método	Ruta	                Descripción
-POST	/votes	                Emitir un voto voter_id y candidate_id
-GET	/votes	                Listar todos los votos emitidos
-GET	/votes/statistics	Obtener estadísticas de votación total, porcentaje, total de votantes que votaron.
+## Votantes
+
+| Método | Ruta          | Descripción                  |
+|--------|---------------|------------------------------|
+| POST   | `/voters`     | Registrar un nuevo votante   |
+| GET    | `/voters`     | Listar todos los votantes    |
+| GET    | `/voters/{id}`| Obtener un votante por ID    |
+| DELETE | `/voters/{id}`| Eliminar un votante          |
+
+---
+
+## Candidatos
+
+| Método | Ruta               | Descripción                    |
+|--------|------------------|--------------------------------|
+| POST   | `/candidates`     | Registrar un nuevo candidato   |
+| GET    | `/candidates`     | Listar todos los candidatos    |
+| GET    | `/candidates/{id}`| Obtener un candidato por ID    |
+| DELETE | `/candidates/{id}`| Eliminar un candidato          |
+
+---
+
+## Votos
+
+| Método | Ruta                  | Descripción                                              |
+|--------|---------------------|----------------------------------------------------------|
+| POST   | `/votes`             | Emitir un voto (`voter_id` y `candidate_id`)            |
+| GET    | `/votes`             | Listar todos los votos emitidos                          |
+| GET    | `/votes/statistics`  | Obtener estadísticas de votación: total, porcentaje, total de votantes que votaron |
+
 # Documentación
-FastAPI genera documentación automática para ingrear a ella se debe iniciar el servidor local y luego ingresar a cualquiera de las 2 URL
+FastAPI genera documentación automática, para ingrear a ella se debe iniciar el servidor local y luego ingresar a cualquiera de las 2 URL
 
 Swagger UI: http://127.0.0.1:8000/docs
 ReDoc: http://127.0.0.1:8000/redoc
@@ -85,6 +106,7 @@ ReDoc: http://127.0.0.1:8000/redoc
     "has_voted": false,
     "message": "Votante registrado exitosamente"
 }
+
 
 
 
