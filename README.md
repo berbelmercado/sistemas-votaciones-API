@@ -43,7 +43,7 @@ POST	/votes	                Emitir un voto voter_id y candidate_id
 GET	/votes	                Listar todos los votos emitidos
 GET	/votes/statistics	Obtener estadísticas de votación total, porcentaje, total de votantes que votaron.
 # Documentación
-FastAPI genera documentación automática se debe iniciar el sersidor local y luego ingresar a cualquiera de las 2 URL
+FastAPI genera documentación automática para ingrear a ella se debe iniciar el servidor local y luego ingresar a cualquiera de las 2 URL
 
 Swagger UI: http://127.0.0.1:8000/docs
 ReDoc: http://127.0.0.1:8000/redoc
@@ -85,5 +85,6 @@ ReDoc: http://127.0.0.1:8000/redoc
     "has_voted": false,
     "message": "Votante registrado exitosamente"
 }
+
 
 
