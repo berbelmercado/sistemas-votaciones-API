@@ -3,16 +3,17 @@ Permite registrar votantes, candidatos, emitir votos y obtener estadísticas de 
 
 La base de datos utilizada es SQLite, para facilitar la ejecución sin necesidad de instalar servidores adicionales.
 
-----Instrucciones para ejecutar el proyecto
+#Instrucciones para ejecutar el proyecto
 
 1. descargar el archivo desde Github contenido en la URL https://github.com/berbelmercado/sistemas-votaciones-API
 2. abrir la carpeta descargada desde Visual Studio Code
 3. abrimos una nueva terminal en VSCode y creamos un entorno virtual:
-	python -m venv env
 	# Windows
-	env\Scripts\activate
+	python -m venv env
+	
 	# Mac/Linux
 	source env/bin/activate
+
 4. activamos entorno virtual: cd env/Scripts/activate o abriendo una nueva terminal en VSCode
 5. instalamos las dependencias ejecutando la siguiente linea:
 	pip install -r requirement.txt
@@ -20,7 +21,7 @@ La base de datos utilizada es SQLite, para facilitar la ejecución sin necesidad
 6. ejecutamos la siguiente linea para iniciar servidor local:
 	 uvicorn  app:app --reload 
 
-----Endpoints
+#Endpoints
 
 Votantes
 Método	Ruta	        Descripción
@@ -42,41 +43,41 @@ POST	/votes	                Emitir un voto voter_id y candidate_id
 GET	/votes	                Listar todos los votos emitidos
 GET	/votes/statistics	Obtener estadísticas de votación total, porcentaje, total de votantes que votaron.
 
----Ejemplos en postman
+#Ejemplos en postman
 >>>>>>	GET http://127.0.0.1:8000/votes/
 	Salida
 [
-    {
-        "id": 1,
-        "voter_id": 1,
-        "candidate_id": 1
-    },
-    {
-        "id": 2,
-        "voter_id": 2,
-        "candidate_id": 3
-    },
-    {
-        "id": 3,
-        "voter_id": 3,
-        "candidate_id": 3
-    }
+{
+"id": 1,
+"voter_id": 1,
+"candidate_id": 1
+},
+{
+"id": 2,
+"voter_id": 2,
+"candidate_id": 3
+},
+{
+"id": 3,
+"voter_id": 3,
+"candidate_id": 3
+}
 ]
 >>>>>>	POST http://127.0.0.1:8000/votes/
 	-> Json:
-	{
-  	 "voter_id": 12,
- 	 "candidate_id": 3
-	}
-	-> Salida
 {
-    "id": 13,
-    "voter_id": 13,
-    "candidate_id": 3,
-    "message": "Voto registrado exitosamente"
+"voter_id": 12,
+"candidate_id": 3
+}
+> Salida
+{
+"id": 13,
+"voter_id": 13,
+"candidate_id": 3,
+"message": "Voto registrado exitosamente"
 }
 
-----Documentación
+#Documentación
 FastAPI genera documentación automática se debe iniciar el sersidor local y luego ingresar a cualquiera de las 2 URL
 
 Swagger UI: http://127.0.0.1:8000/docs
