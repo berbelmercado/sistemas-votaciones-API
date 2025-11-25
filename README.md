@@ -82,4 +82,7 @@ FastAPI genera documentación automática se debe iniciar el sersidor local y lu
 
 Swagger UI: http://127.0.0.1:8000/docs
 
+
 ReDoc: http://127.0.0.1:8000/redoc
+
+<img width="568" height="574" alt="image" src="https://github.com/user-attachments/assets/29b5ef04-a573-476a-9988-614f28647f53" />
