@@ -117,7 +117,7 @@ ReDoc: http://127.0.0.1:8000/redoc
     "message": "Candidato registrado exitosamente"
 }
 ````
--------------------------------------------------
+
 **Endpoint:** `http://127.0.0.1:8000/candidates/`
 **Descripción:** Consulta todos los candidatos registrados.
 
@@ -151,4 +151,5 @@ ReDoc: http://127.0.0.1:8000/redoc
     "message": "Candidato eliminado"
 }
 ````
+
 
