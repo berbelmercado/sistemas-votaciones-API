@@ -68,7 +68,7 @@ ReDoc: http://127.0.0.1:8000/redoc
 **Endpoint:** `http://127.0.0.1:8000/voters/1`  
 **Descripción:** Busca un votante indicando su id.
 
-**Request (GET):**
+**Request (GET):**  
 **Respuesta:**  
 ```json
 {
@@ -81,7 +81,7 @@ ReDoc: http://127.0.0.1:8000/redoc
 **Endpoint:** `http://127.0.0.1:8000/voters/`  
 **Descripción:** Crea un nuevo votante.
 
-**Request (POST):**
+**Request (POST):**  
 
 ```json
 {
@@ -90,7 +90,8 @@ ReDoc: http://127.0.0.1:8000/redoc
 }
 ````
 **Respuesta:**  
-```json{
+```json
+{
     "name": "CamDanielaila",
     "email": "DaRD@hotmail",
     "has_voted": false,
@@ -101,15 +102,17 @@ ReDoc: http://127.0.0.1:8000/redoc
 **Endpoint:** `http://127.0.0.1:8000/candidates/`  
 **Descripción:** Crea un nuevo candidato.
 
-**Request (POST):**
+**Request (POST):**  
 
-```json{
+```json
+{
   "name": "edgar",
   "party": "hermandad"
 }
 ````
 **Respuesta:**  
-```json{
+```json
+{
     "name": "edgar",
     "party": "hermandad",
     "id": 4,
@@ -118,12 +121,13 @@ ReDoc: http://127.0.0.1:8000/redoc
 }
 ````
 
-**Endpoint:** `http://127.0.0.1:8000/candidates/`
+**Endpoint:** `http://127.0.0.1:8000/candidates/`   
 **Descripción:** Consulta todos los candidatos registrados.
 
-**Request (GET):**
+**Request (GET):**  
 **Respuesta:**  
-```json {
+```json
+{
         "id": 1,
         "name": "felipe",
         "party": "Unidos",
@@ -142,14 +146,16 @@ ReDoc: http://127.0.0.1:8000/redoc
         "votes": 0
     }
 ````
-**Endpoint:** `http://127.0.0.1:8000/candidates/4`
+**Endpoint:** `http://127.0.0.1:8000/candidates/4`   
 **Descripción:** Elimina un candidato indicando su ID.
 
-**Request (DELETE):**
+**Request (DELETE):**   
 **Respuesta:** 
-```json{
+```json
+{
     "message": "Candidato eliminado"
 }
 ````
+
 
 
