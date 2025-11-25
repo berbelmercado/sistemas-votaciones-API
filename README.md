@@ -43,46 +43,23 @@ POST	/votes	                Emitir un voto voter_id y candidate_id
 GET	/votes	                Listar todos los votos emitidos
 GET	/votes/statistics	Obtener estadísticas de votación total, porcentaje, total de votantes que votaron.
 
-#Ejemplos en postman
->>>>>>	GET http://127.0.0.1:8000/votes/
+# Ejemplos en postman
+>>>>>>	GET [http://127.0.0.1:8000/votes/](http://127.0.0.1:8000/voters/1)
 	Salida
-[
-{
-"id": 1,
-"voter_id": 1,
-"candidate_id": 1
-},
-{
-"id": 2,
-"voter_id": 2,
-"candidate_id": 3
-},
-{
-"id": 3,
-"voter_id": 3,
-"candidate_id": 3
-}
-]
->>>>>>	POST http://127.0.0.1:8000/votes/
+<img width="374" height="164" alt="image" src="https://github.com/user-attachments/assets/02592811-b589-4075-9b4f-baaf71869037" />
+
+>>>>>>	POST [http://127.0.0.1:8000/votes/](http://127.0.0.1:8000/candidates/)
 	-> Json:
-{
-"voter_id": 12,
-"candidate_id": 3
-}
-> Salida
-{
-"id": 13,
-"voter_id": 13,
-"candidate_id": 3,
-"message": "Voto registrado exitosamente"
-}
+<img width="300" height="264" alt="image" src="https://github.com/user-attachments/assets/336015d4-8f70-4f0d-a4ea-38c390e70c44" />
+
 
 # Documentación
 FastAPI genera documentación automática se debe iniciar el sersidor local y luego ingresar a cualquiera de las 2 URL
 
 Swagger UI: http://127.0.0.1:8000/docs
-
-
 ReDoc: http://127.0.0.1:8000/redoc
 
+# Capturas de estadisticas
+- http://127.0.0.1:8000/votes/statistics
 <img width="568" height="574" alt="image" src="https://github.com/user-attachments/assets/29b5ef04-a573-476a-9988-614f28647f53" />
+
