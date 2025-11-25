@@ -23,16 +23,6 @@ La base de datos utilizada es SQLite, para facilitar la ejecución sin necesidad
 
 # Endpoints
 
-Votantes
-Método	Ruta	        Descripción
-POST	/voters	        Registrar un nuevo votante
-GET	/voters	        Listar todos los votantes
-GET	/voters/{id}	Obtener un votante por ID
-DELETE	/voters/{id}	Eliminar un votante
-
-Candidatos
-# Documentación de la API de Sistema de Votaciones
-
 ## Votantes
 
 | Método | Ruta          | Descripción                  |
@@ -40,7 +30,7 @@ Candidatos
 | POST   | `/voters`     | Registrar un nuevo votante   |
 | GET    | `/voters`     | Listar todos los votantes    |
 | GET    | `/voters/{id}`| Obtener un votante por ID    |
-| DELETE | `/voters/{id}`| Eliminar un votante          |
+| DELETE | `/voters/{id}`| Eliminar un votante  por ID        |
 
 ---
 
@@ -51,7 +41,7 @@ Candidatos
 | POST   | `/candidates`     | Registrar un nuevo candidato   |
 | GET    | `/candidates`     | Listar todos los candidatos    |
 | GET    | `/candidates/{id}`| Obtener un candidato por ID    |
-| DELETE | `/candidates/{id}`| Eliminar un candidato          |
+| DELETE | `/candidates/{id}`| Eliminar un candidato por ID       |
 
 ---
 
@@ -59,7 +49,7 @@ Candidatos
 
 | Método | Ruta                  | Descripción                                              |
 |--------|---------------------|----------------------------------------------------------|
-| POST   | `/votes`             | Emitir un voto (`voter_id` y `candidate_id`)            |
+| POST   | `/votes`             | Emitir un voto  |
 | GET    | `/votes`             | Listar todos los votos emitidos                          |
 | GET    | `/votes/statistics`  | Obtener estadísticas de votación: total, porcentaje, total de votantes que votaron |
 
@@ -161,3 +151,4 @@ ReDoc: http://127.0.0.1:8000/redoc
     "message": "Candidato eliminado"
 }
 ````
+
