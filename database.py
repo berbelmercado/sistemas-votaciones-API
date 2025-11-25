@@ -8,8 +8,9 @@ DATABASE_URL = "sqlite:///databases/votaciones.db"
 engine = create_engine(
     DATABASE_URL, connect_args={"check_same_thread": False}
 )
-
+#Manejo de seciones
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 #Base declarativa, padre para los modelos
+
 Base = declarative_base()
