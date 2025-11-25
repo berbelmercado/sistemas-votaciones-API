@@ -75,11 +75,11 @@ ReDoc: http://127.0.0.1:8000/redoc
 
 # Ejemplos en postman
 
-**Endpoint:** ` GET http://127.0.0.1:8000/voters/1`  
-**Descripción:** Busca un votante.
+**Endpoint:** `http://127.0.0.1:8000/voters/1`  
+**Descripción:** Busca un votante indicando su id.
 
 **Request (GET):**
-
+**Respuesta:**  
 ```json
 {
     "name": "milton",
@@ -88,8 +88,8 @@ ReDoc: http://127.0.0.1:8000/redoc
     "has_voted": true
 }
 ````
-**Endpoint:** ` POST http://127.0.0.1:8000/voters/1`  
-**Descripción:** Busca un votante.
+**Endpoint:** `http://127.0.0.1:8000/voters/`  
+**Descripción:** Crea un nuevo votante.
 
 **Request (POST):**
 
@@ -98,7 +98,7 @@ ReDoc: http://127.0.0.1:8000/redoc
 	"name": "CamDanielaila"
     ,"email":"DaRD@hotmail"
 }
-
+````
 **Respuesta:**  
 ```json{
     "name": "CamDanielaila",
@@ -108,6 +108,56 @@ ReDoc: http://127.0.0.1:8000/redoc
 }
 ````
 
+**Endpoint:** `http://127.0.0.1:8000/candidates/`  
+**Descripción:** Crea un nuevo candidato.
 
+**Request (POST):**
 
+```json{
+  "name": "edgar",
+  "party": "hermandad"
+}
+````
+**Respuesta:**  
+```json{
+    "name": "edgar",
+    "party": "hermandad",
+    "id": 4,
+    "votes": 0,
+    "message": "Candidato registrado exitosamente"
+}
+````
+-------------------------------------------------
+**Endpoint:** `http://127.0.0.1:8000/candidates/`
+**Descripción:** Consulta todos los candidatos registrados.
 
+**Request (GET):**
+**Respuesta:**  
+```json {
+        "id": 1,
+        "name": "felipe",
+        "party": "Unidos",
+        "votes": 3
+    }
+
+        "id": 3,
+        "name": "fernando",
+        "party": "Alianza",
+        "votes": 10
+    }
+
+        "id": 4,
+        "name": "edgar",
+        "party": "hermandad",
+        "votes": 0
+    }
+````
+**Endpoint:** `http://127.0.0.1:8000/candidates/4`
+**Descripción:** Elimina un candidato indicando su ID.
+
+**Request (DELETE):**
+**Respuesta:** 
+```json{
+    "message": "Candidato eliminado"
+}
+````
