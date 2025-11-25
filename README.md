@@ -42,6 +42,15 @@ Método	Ruta	                Descripción
 POST	/votes	                Emitir un voto voter_id y candidate_id
 GET	/votes	                Listar todos los votos emitidos
 GET	/votes/statistics	Obtener estadísticas de votación total, porcentaje, total de votantes que votaron.
+# Documentación
+FastAPI genera documentación automática se debe iniciar el sersidor local y luego ingresar a cualquiera de las 2 URL
+
+Swagger UI: http://127.0.0.1:8000/docs
+ReDoc: http://127.0.0.1:8000/redoc
+
+# Capturas de estadisticas
+- http://127.0.0.1:8000/votes/statistics
+<img width="568" height="574" alt="image" src="https://github.com/user-attachments/assets/29b5ef04-a573-476a-9988-614f28647f53" />
 
 # Ejemplos en postman
 
@@ -76,15 +85,5 @@ GET	/votes/statistics	Obtener estadísticas de votación total, porcentaje, tota
     "has_voted": false,
     "message": "Votante registrado exitosamente"
 }
-
-# Documentación
-FastAPI genera documentación automática se debe iniciar el sersidor local y luego ingresar a cualquiera de las 2 URL
-
-Swagger UI: http://127.0.0.1:8000/docs
-ReDoc: http://127.0.0.1:8000/redoc
-
-# Capturas de estadisticas
-- http://127.0.0.1:8000/votes/statistics
-<img width="568" height="574" alt="image" src="https://github.com/user-attachments/assets/29b5ef04-a573-476a-9988-614f28647f53" />
 
 
